@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traveler's Diary</title>
+  <meta name="description" content="Traveler's Diary — Search characters, weapons, materials and enemies across Teyvat." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=Caveat:wght@500;600&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;600&family=Noto+Serif+JP:wght@400;600&family=Klee+One:wght@400;600&family=Noto+Serif+KR:wght@400;600&family=Nanum+Pen+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" /><link rel="stylesheet" href="reference.css" />
+</head>
+<body>
+  <div class="scene" id="scene">
+
+    <div class="bg" id="bg" aria-hidden="true"></div>
+    <div class="veil" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="fireflies" id="fireflies" aria-hidden="true"></div>
+
+    <div class="reference-site">
+      <header class="site-header"><a class="site-brand" href="#browse/home">✧ Traveler's Diary <small>TEYVAT FIELD GUIDE</small></a>      <div class="toolbar">
+        <div class="lang" id="lang">
+          <button class="lang-toggle" id="langToggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+            <svg class="lang-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18" />
+            </svg>
+            <span id="langCurrent">English</span>
+            <span class="lang-caret" aria-hidden="true">▾</span>
+          </button>
+          <ul class="lang-menu" id="langMenu" role="listbox"></ul>
+        </div>
+
+        <div class="music" id="music">
+          <button class="lang-toggle music-toggle" id="musicToggle" type="button" aria-haspopup="dialog" aria-expanded="false">
+            <svg class="lang-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="17" cy="16" r="3" /></svg>
+            <span class="music-label">Music</span>
+            <span class="music-eq" aria-hidden="true"><i></i><i></i><i></i></span>
+          </button>
+          <div class="music-panel" id="musicPanel" role="dialog" aria-labelledby="musicTitle">
+            <div class="music-head">
+              <p class="music-title" id="musicTitle">Sounds of the Journey</p>
+              <div class="music-sources" id="musicSources" role="tablist"></div>
+              <a class="music-open" id="musicOpen" target="_blank" rel="noopener" hidden></a>
+              <button class="music-close" id="musicClose" type="button" aria-label="close">×</button>
+            </div>
+            <div class="music-body">
+              <div class="music-list" id="musicList"></div>
+              <div class="music-player">
+                <div class="music-now" id="musicNow"></div>
+                <p class="music-note" id="musicNote"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</header>
+      <main id="referenceMain"></main>
+      <footer class="site-footer">Traveler's Diary · Genshin community reference · <a href="https://github.com/genshindev/api" target="_blank" rel="noopener">genshin.dev API</a> · <a href="https://github.com/theBowja/genshin-db" target="_blank" rel="noopener">Image references</a></footer>
+    </div>
+  </div>
+
+  <script src="data/diary-data.js"></script>
+  <script src="data/music.js"></script>
+  <script src="i18n.js"></script>
+  <script src="api.js"></script>
+  <script src="data/image-catalog.js"></script>
+  <script src="image-resolver.js"></script>
+  <script src="codex.js"></script>
+  <script src="reference.js"></script>
+  <script src="music.js"></script>
+</body>
+</html>
